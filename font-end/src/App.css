@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --white: #FFFFFF;
+  --black: #303841;
+  --gray: #777777;
+  --yellow: #F6C90E;
+}
+
+#root {
+  font-family: 'Rubik', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes slideUpDown {
+  0% {
+      transform: translateX(-50%) skew(0deg,-8deg)
+  }
+
+  to {
+      transform: translateX(-30%) skew(8deg,-4deg)
+  }
+}
+
+.app-background::before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateX(-50%) skewY(-8deg);
+  background-color: var(--yellow);
+  z-index: -1;
+  -webkit-animation: slideUpDown 8s ease-in-out infinite alternate;
+  animation: slideUpDown 8s ease-in-out infinite alternate;
+}
+
+.qty-button {
+  background-color: #f4f4ff;
+  border: none;
+  border-radius: 10rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 0;
+}
+
+.qty-button:hover {
+  background-color: #dfdfdf;
+}
+
+.qty-button-icon {
+  width: 0.5rem;
+}
+
+.trash-button {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 10rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 0;
+  float: right;
+  padding: 1px 1px;
+}
+
+.trash-button:hover {
+  opacity: 0.8;
+}
+
+.trash-button-icon {
+  width: 1rem;
+}
+
+.product-check-container {
+  float: right;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 10rem;
+  text-align: center;
+  line-height: 2.8rem;
+  background-color: var(--yellow);
+}
+
+.product-check-icon {
+  width: 1.5rem;
+}
+
+.product-add-button {
+  background-color: var(--yellow);
+  float: right;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  font-weight: bold;
+}
